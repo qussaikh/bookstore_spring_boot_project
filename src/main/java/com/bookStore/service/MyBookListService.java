@@ -2,6 +2,7 @@ package com.bookStore.service;
 
 import java.util.List;
 
+import com.bookStore.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,16 @@ public class MyBookListService {
 	
 	public void deleteById(int id) {
 		mybook.deleteById(id);
+	}
+
+	public double getTotalPriceForAllBooks() {
+		List<MyBookList> allBooks = getAllMyBooks();
+		double totalPrice = 0.0;
+
+		for (MyBookList book : allBooks) {
+			totalPrice += book.getPrice();
+		}
+
+		return totalPrice;
 	}
 }
