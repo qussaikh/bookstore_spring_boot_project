@@ -27,14 +27,14 @@ public class MyBookListService {
 		mybook.deleteById(id);
 	}
 
-	public double getTotalPriceForAllBooks() {
-		List<MyBookList> allBooks = getAllMyBooks();
-		double totalPrice = 0.0;
-
-		for (MyBookList book : allBooks) {
-			totalPrice += book.getPrice();
-		}
-
-		return totalPrice;
-	}
+//	public double getTotalPriceForAllBooks() {
+//		List<MyBookList> allBooks = getAllMyBooks();
+//		double totalPrice = 0.0;
+//
+//		for (MyBookList book : allBooks) {
+//			totalPrice += book.getPrice();
+//		}
+//
+//		return totalPrice;
+//	}
 }
