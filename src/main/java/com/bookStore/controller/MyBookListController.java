@@ -22,11 +22,11 @@ public class MyBookListController {
 		return "redirect:/my_books";
 	}
 
-//	// Endpoint för att hämta totalpriset för alla böcker
-//	@GetMapping("/totalPrice")
-//	public ResponseEntity<Double> getTotalPriceForAllBooks() {
-//		double totalPrice = service.getTotalPriceForAllBooks();
-//		return ResponseEntity.ok(totalPrice);
-//	}
+	// Endpoint för att hämta totalpriset för alla böcker
+	@GetMapping("/totalPrice")
+	public ResponseEntity<Double> getTotalPriceForAllBooks() {
+		double totalPrice = service.getTotalPriceForAllBooks();
+		return ResponseEntity.ok(totalPrice);
+	}
 
 }

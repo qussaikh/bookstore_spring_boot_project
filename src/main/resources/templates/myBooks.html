@@ -56,9 +56,30 @@
       <td th:text="${b.id}"></td>
       <td th:text="${b.name}"></td>
       <td th:text="${b.author}"></td>
-      <td th:text="${b.price}"></td> 
-      <td><a style="color:red" th:href="@{/deleteMyList/{id}(id=${b.id})}"><i class="fa-solid fa-trash"></i></a></td> 
+      <td th:text="${b.price}"></td>
+      <td><a style="color:red" th:href="@{/deleteMyList/{id}(id=${b.id})}"><i class="fa-solid fa-trash"></i></a></td>
     </tr>
+
+    <p id="totalPrice"></p>
+
+    <script>
+        // Hämta totalpriset för alla böcker när sidan laddas
+        window.onload = function() {
+            getTotalPrice();
+        };
+
+        function getTotalPrice() {
+            // Gör en förfrågan till endpointen
+            fetch('/totalPrice')
+                .then(response => response.json())
+                .then(data => {
+                    // Uppdatera sidans innehåll med det returnerade värdet
+                    document.getElementById('totalPrice').textContent = 'Total Price: ' + data.toFixed(2) + ' SEK'; // Anta att priset returneras i SEK
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+
   </tbody>
 </table>
   </div>

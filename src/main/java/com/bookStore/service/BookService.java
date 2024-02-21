@@ -29,13 +29,4 @@ public class BookService {
 		bRepo.deleteById(id);
 	}
 
-	public double getTotalPrice(){
-		List<Book> books = getAllBook();
-		double totalPrice = 0.0;
-		for (Book book : books) {
-			totalPrice += book.getPrice();
-		}
-		return totalPrice;
-	}
-
 }
