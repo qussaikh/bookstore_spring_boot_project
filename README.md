@@ -15,9 +15,12 @@ Open a web browser and go to http://bookstore-beanstalk-env.eba-xpi2ybmt.eu-nort
 ## CI/CD Pipeline
 The application has a CI/CD pipeline on AWS that automates the build, test, and deploy process. Each push to the GitHub repository triggers the pipeline to ensure a stable and efficient development process.
 
-![build.png](..%2F..%2FDesktop%2Fbuild.png)
+![build](https://github.com/qussaikh/bookstore_spring_boot_project/assets/106125439/78f9ced1-9b48-4d09-b336-9d92f634e4d5)
 
-![pipeline.png](..%2F..%2FDesktop%2Fpipeline.png)
+![pipeline](https://github.com/qussaikh/bookstore_spring_boot_project/assets/106125439/3fa082cc-3349-4815-bf2d-b7cbf21051a9)
+
+![source build deploy](https://github.com/qussaikh/bookstore_spring_boot_project/assets/106125439/15bf94e7-5227-4914-9874-eb6dbc6a1ceb)
+
 
 ## Testing
 Testing is performed automatically with JUnit tests included in the project. GitHub Actions is configured to run these tests on every push.
