@@ -7,10 +7,7 @@ This project is a Maven-based Spring Boot application demonstrating the implemen
 - Includes a Build process on GitHub Actions for testing.
 - Automatic testing with JUnit tests.
 - Application can handle various types of requests.
-- Thymeleaf for client GUI. 
-
-
-Open a web browser and go to http://bookstore-beanstalk-env.eba-xpi2ybmt.eu-north-1.elasticbeanstalk.com:8080/ to test the application locally.
+- Thymeleaf for Client GUI.
 
 ## CI/CD Pipeline
 The application has a CI/CD pipeline on AWS that automates the build, test, and deploy process. Each push to the GitHub repository triggers the pipeline to ensure a stable and efficient development process.
